@@ -11,10 +11,12 @@ const ROUTES = {
 
 export const App = {
   currentUser: null,
-
+console.log("3. App.init");
   async init() {
     // Escuchar cambios de autenticación
     Auth.onAuthStateChange(async (event, session) => {
+      console.log("4. Evento:", event);
+      console.log(session);
       if (event === 'SIGNED_OUT' || !session) {
         this.currentUser = null;
         this.redirect(ROUTES.login);
