@@ -71,10 +71,13 @@
     btn.disabled = true;
     btn.textContent = 'Verificando...';
     errDiv.style.display = 'none';
+    console.log("1. Antes del signIn y del try");
 
     try {
+      
       await Auth.signIn(email, password);
-      // La redirección ocurre automáticamente via onAuthStateChange en App.init()
+      
+      console.log("2. Después del signIn");      // La redirección ocurre automáticamente via onAuthStateChange en App.init()
     } catch (err) {
       showError('Credenciales incorrectas. Intenta de nuevo.');
       btn.disabled = false;
