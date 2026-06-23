@@ -16,7 +16,10 @@ export const db = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 export const Auth = {
   async signIn(email, password) {
+        console.log("Entrando a signIn");
     const { data, error } = await db.auth.signInWithPassword({ email, password });
+    console.log(data);
+    console.log(error);
     if (error) throw error;
     return data;
   },
