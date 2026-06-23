@@ -2,8 +2,8 @@
 
 // ⚠️ REEMPLAZA ESTOS VALORES con los de tu proyecto Supabase
 // Los encuentras en: Settings > API en tu dashboard de Supabase
-const SUPABASE_URL = 'https://TU_PROJECT_ID.supabase.co';
-const SUPABASE_ANON_KEY = 'TU_ANON_KEY';
+const SUPABASE_URL = 'https://dnxbldpvjiarscnouiam.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRueGJsZHB2amlhcnNjbm91aWFtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIxNjI3MjQsImV4cCI6MjA5NzczODcyNH0.mIyfZkPF3wYMOFzEf3B6QAwc272n_qAwBxVLwqsIXmg';
 
 // Importar cliente de Supabase (desde CDN en index.html)
 const { createClient } = supabase;
