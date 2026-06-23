@@ -33,17 +33,19 @@ export const Auth = {
 
   async getCurrentUser() {
     const { data: { user } } = await db.auth.getUser();
-    if (!user) return null;
 
-    const { data: profile } = await db
-      .from('profiles')
-      .select('*')
-      .eq('id', user.id)
-      .single();
+    console.log("USER:", user);
 
-    return profile ? { ...user, ...profile } : null;
-  },
+    const result = await db
+        .from("profiles")
+        .select("*")
+        .eq("id", user.id)
+        .single();
 
+    console.log(result);
+
+    return result.data ? { ...user, ...result.data } : null;
+},
   // Crea cuenta de paciente (solo dentistas)
   async createPatientAccount({ email, password, full_name, patientId }) {
     // Usamos la Admin API vía Edge Function para esto
