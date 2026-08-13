@@ -1,4 +1,4 @@
-#DentalPro — Sistema de Gestión Dental
+# DentalPro — Sistema de Gestión Dental
 
 Sistema completo para consultorios dentales con autenticación por roles, gestión de pacientes, citas y pagos.
 
